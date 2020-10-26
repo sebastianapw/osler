@@ -1,1 +1,1 @@
-web: docker-compose -f local.yml up
+web: docker-compose -f local-umkc.yml up
