@@ -4,10 +4,8 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
-import os
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
-
 # osler/
 APPS_DIR = ROOT_DIR / "osler"
 env = environ.Env()
@@ -161,9 +159,9 @@ MIDDLEWARE = [
 # STATIC
 # -----------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = os.path.join(ROOT_DIR , 'staticfiles')
+STATIC_ROOT = str(ROOT_DIR / "staticfiles")
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-url
-STATIC_URL = 'osler/static/'
+STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = [str(APPS_DIR / "static")]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
