@@ -37,5 +37,8 @@ services:
 
   nginx: 
     image: nginx
-
+    ports:
+      - "8000:80"
+    depends_on:
+      - django
   

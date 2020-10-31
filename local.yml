@@ -41,3 +41,4 @@ services:
     ports:
       - 4444:4444   # Selenium
       - 5900:5900   # VNC server
+
