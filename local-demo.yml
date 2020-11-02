@@ -13,6 +13,7 @@ services:
     container_name: django
     depends_on:
       - postgres
+      - redis
     volumes:
       - .:/app
     env_file:
@@ -36,6 +37,9 @@ services:
       - local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
+    
+  redis:
+    image: redis:5.0
 
   selenium:
     image: selenium/standalone-chrome-debug:3.141
