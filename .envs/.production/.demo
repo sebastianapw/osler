@@ -1,1 +1,2 @@
 export DJANGO_SETTINGS_MODULE=config.settings.demo
+export DJANGO_ALLOWED_HOSTS = oslerdemo.centralus.cloudapp.azure.com
