@@ -21,7 +21,7 @@ services:
       - ./.envs/.local/.postgres
       - ./.envs/.local/.demo
     ports:
-      - "80:80"
+      - "8000:8000"
     command: /start
     links:
       - selenium
