@@ -56,6 +56,7 @@ def display_diabetes(request):
 
     dashboard_data = get_dashboard_data(diabetic_workups)
     data = dumps(dashboard_data)
+    print(data)
 
     context = {'workup_data': workup_data, 'data':data}
     return render(request,'datadashboard/patient_data_dashboard.html',context)
