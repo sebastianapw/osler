@@ -48,7 +48,7 @@
                       <td>
                           {% if latest_workup %}
                             {% if latest_workup.is_pending %}
-                                <a href="{% url 'workup' pk=latest_workup.pk %}">{% blocktrans %} Pending </a>: {{ latest_workup.chief_complaint | default:"no chief complaint provided" }}{% endblocktrans %}
+                            <a href="{% url 'workup' pk=latest_workup.pk %}">{% blocktrans %} Pending from {% endblocktrans %}{{ latest_workup.encounter.clinic_day }} </a>: {{ latest_workup.chief_complaint | default:"no chief complaint provided" }}
                             {% else %}
                               <a href="{% url 'workup' pk=latest_workup.pk %}">{% blocktrans %} Seen {{ latest_workup.clinic_day.clinic_date }}</a>: {{latest_workup.chief_complaint}}{% endblocktrans %}
                             {% endif %}

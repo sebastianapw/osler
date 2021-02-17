@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-17 08:50-0600\n"
+"POT-Creation-Date: 2021-02-17 15:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1321,13 +1321,9 @@ msgid "Attestation"
 msgstr "Bestätigung"
 
 #: osler/templates/core/all_patients.html:51
-#, python-format
-msgid ""
-" Pending </a>: "
-"%(latest_workup.chief_complaint | default:\"no chief complaint provided\")s"
-msgstr ""
-" Pending </a>: "
-"%(latest_workup.chief_complaint | default:\"no chief complaint provided\")s"
+#| msgid "Pending"
+msgid " Pending from "
+msgstr "Ausstehend vom "
 
 #: osler/templates/core/all_patients.html:53
 #, fuzzy, python-format
@@ -2953,6 +2949,13 @@ msgstr ""
 #| msgid "Added by"
 msgid "Addendum"
 msgstr "Hinzugefügt von"
+
+#~ msgid ""
+#~ " Pending </a>: %(latest_workup.chief_complaint | default:\"no chief "
+#~ "complaint provided\")s"
+#~ msgstr ""
+#~ " Pending </a>: %(latest_workup.chief_complaint | default:\"no chief "
+#~ "complaint provided\")s"
 
 #~ msgid ""
 #~ "How many <b>%(drug.name)s %(dose)s %(unit)s</b> would you like to "

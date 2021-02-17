@@ -298,7 +298,7 @@ class Patient(Person):
         elif len(pending) > 0:
             next_item = min(pending, key=lambda k: k.due_date)
             tdelta = next_item.due_date - now().date()
-            return str(next_item.short_name())+" in "+str(tdelta.days)+_(" days")
+            return str(next_item.short_name()) + " in " + str(tdelta.days) + str(_(" days"))
         elif len(done) > 0:
             return _("all actions complete")
         else:
@@ -544,5 +544,5 @@ class ActionItem(AbstractActionItem):
                        args=(self.id,))
 
     def __str__(self):
-        return " ".join([_("AI for"), str(self.patient) + ":",
-                         str(self.instruction), _("due on"), str(self.due_date)])
+        return " ".join([str(_("AI for")), str(self.patient) + ":",
+                         str(self.instruction), str(_("due on")), str(self.due_date)])
