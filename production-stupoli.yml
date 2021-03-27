@@ -18,6 +18,8 @@ services:
       - redis
     env_file:
       - ./.envs/.production/.django
+      - ./.envs/.production/.secrets
+
     command: /start
     networks:
       - nginx_network
@@ -34,6 +36,8 @@ services:
       - production_postgres_data_backups:/backups
     env_file:
       - ./.envs/.production/.postgres
+      - ./.envs/.production/.secrets
+
     networks:
       - database_network
 
@@ -45,9 +49,8 @@ services:
     env_file:
       - ./.envs/.production/.nginx
     volumes:
-      - ./compose/production/nginx/templates:/etc/nginx/conf.d
+      - ./compose/production/nginx/templates:/etc/nginx/templates
       - ./compose/production/nginx/certs:/etc/nginx/certs
-
     depends_on:
       - django
     networks:
